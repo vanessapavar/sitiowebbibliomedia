@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Bibliomedia</title>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script>
+    $(function() {
+    var pull = $('#pull');
+    var menu = $('nav ul');
+
+    $(pull).on('click', function(e) {
+        e.preventDefault();
+        menu.slideToggle(); 
+    });
+
+    $(window).resize(function(){
+        var w = $(window).width();
+        if (w > 767) {
+            menu.removeAttr('style'); 
+            menu.css('display', 'flex'); 
+        } else if (w <= 767) {
+            menu.hide(); 
+        }
+    });
+});
+
+</script>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="multimedia/logo.png" alt="Libros">
+            <h1 class="title">BIBLIOMEDIA</h1>
+        </div>  
+        <nav>
+            <a id="pull" href="#"><img src="multimedia/nav-icon_transparente.png"></a>
+            <ul>
+                <li><a href="#autores">Autores</a></li>
+                <li><a href="#autoreslibros">Autores y sus libros</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+                
+            </ul>
+            
+        </nav>
+        <div class="user-icon">
+            <img src="multimedia/icon.png" alt="User Icon">
+        </div>
+    
+</header>
+
+
+<main>
+    <aside class="sidebar">
+        <div class="menu">
+            <h2>Contenido</h2>
+            <ul>
+                <li><a href="#autores">1. Autores</a></li>
+                <li><a href="#categoriasdelibros">2. Categorias de libros</a></li>
+                <li><a href="#estadisticascategorias">3. Estadisticas categorias de libros</a></li>
+                <li><a href="#estadisticasventas">4. Estadisticas Ventas</a></li>
+                <li><a href="#autoreslibros">5. Autores y sus libros</a></li>
+            </ul>
+        </div>
+        <div class="ads">
+            <article>
+            <h3>¡Sumérgete en el Mundo de los Libros!</h3>
+           <p>Los libros tienen el poder de transportarnos a lugares lejanos,<br>
+             hacernos vivir aventuras y descubrir mundos nuevos. <br>
+             Cada página es una puerta a experiencias únicas y conocimientos <br>
+              profundos. Ya sea que te apasione el romance, la ciencia ficción,<br>
+               el misterio o la acción, hay un libro esperando para capturar tu imaginación.</p>
+            </article>
+        </div>
+        
+
+        <div class="info">
+            <article>
+        <h3>¡Bienvenido a Nuestra Biblioteca Digital!</h3>
+        <p>En nuestra biblioteca digital, ofrecemos una vasta colección de <br>
+             recursos en formato digital, accesibles desde la comodidad <br>
+              de tu hogar. Aquí encontrarás libros, artículos, revistas y <br>
+              documentos en una variedad de formatos para satisfacer todas <br>
+              tus necesidades de investigación y lectura.</p>
+            </article>
+        </div>
+
+        <div class="video">
+            <figure>
+                <iframe class="video-libros" src="https://www.youtube.com/embed/yz_NfTVSztQ?si=v8xr9UBP-Rxyj6or" 
+                title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; 
+                encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen>
+                </iframe>
+                <figcaption>¡Viajeros en el tiempo!</figcaption>
+            </figure>
+        
+        </div>
+    </aside>
+    
+    <section class="cards">
+        <div class="card">
+            <img src="multimedia/autores.jpeg" alt="Autores Photo" class="img-left">
+            <div class="card-content">
+                <a name="autores"></a>
+                <h2>Autores</h2>
+            <ol class="autorescard">
+                <li>Ariana Godoy</li>
+                <li>Eva Muñoz</li>
+                <li>Sarah Janet Maas</li>
+                <li>Alex Mirez</li>
+                <li>Flor Guadalupe Mojarraz Salvador</li>
+                <li>Joana Marcus Sastre</li>
+                <li>Alice Kellen</li>
+            </ol>
+        </div>
+            <img src="multimedia/libros.jpeg" alt="Autores Photo" class="img-right">
+            
+        </div>
+        <div class="card">
+            <img src="multimedia/autores.jpeg" alt="Autores Photo" class="img-left">
+            <div class="card-content">
+            <a name="categoriasdelibros"></a>
+               
+            <ul class="categorias">
+                <h2>Categorias de libros</h2>
+                <li>Romance</li>
+                <li>Ficción</li>
+                <li>Acción</li>
+                <li>Misterio</li>
+                <li>Ciencia ficcion</li>
+                <li>No ficcion</li>
+            </ul>
+        </div>
+        <img src="multimedia/libros.jpeg" alt="Autores Photo" class="img-right">
+        </div>
+        <div class="card">
+            <img src="multimedia/autores.jpeg" alt="Autores Photo" class="img-left">
+            <div class="card-content">
+                <a name="estadisticascategorias"></a>
+
+                <h2>Estadisticas categorias de libros</h2>
+            <ul class="estadisticascategoria">
+               
+                <li><strong>Categoría:</strong> Ficción <br>
+                 <strong>Cantidad de Visitas:</strong> 500,000</li>
+                <li><strong>Categoría:</strong> No Ficción <br>
+                 <strong>Cantidad de Visitas:</strong> 300,000</li>
+                <li><strong>Categoría:</strong> Romance <br>
+                <strong>Cantidad de Visitas:</strong> 200,000</li>
+                <li><strong>Categoría:</strong> Ciencia Ficción <br>
+                 <strong>Cantidad de Visitas:</strong> 150,000</li>
+                <li><strong>Categoría:</strong> Misterio <br>
+                <strong>Cantidad de Visitas:</strong> 100,000</li>
+            </ul>
+            
+                
+        </div>
+            <img src="multimedia/libros.jpeg" alt="Sailboat Image" class="img-right">
+            
+        </div>
+        <div class="card">
+            <img src="multimedia/autores.jpeg" alt="Autores Photo" class="img-left">
+            <div class="card-content">
+                <a name="estadisticasventas"></a>
+        <h2>Estadisticas ventas</h2>
+    <ul class="ventas">
+        <li><strong>Ariana Godoy:</strong>
+            <ul>
+                <li>Mes 1: 40,000</li>
+                <li>Mes 2: 42,000</li>
+                <li>Mes 3: 41,000</li>
+            </ul>
+        </li>
+        <li><strong>Eva Muñoz:</strong>
+            <ul>
+                <li>Mes 1: 35,000</li>
+                <li>Mes 2: 37,000</li>
+                <li>Mes 3: 36,000</li>
+            </ul>
+        </li>
+        <li><strong>Sarah Janet Maas:</strong>
+            <ul>
+                <li>Mes 1: 50,000</li>
+                <li>Mes 2: 52,000</li>
+                <li>Mes 3: 51,000</li>
+            </ul>
+        </li>
+        <li><strong>Alex Mirez:</strong>
+            <ul>
+                <li>Mes 1: 30,000</li>
+                <li>Mes 2: 32,000</li>
+                <li>Mes 3: 31,000</li>
+            </ul>
+        </li>
+        <li><strong>Flor M Salvador:</strong>
+            <ul>
+                <li>Mes 1: 25,000</li>
+                <li>Mes 2: 27,000</li>
+                <li>Mes 3: 26,000</li>
+            </ul>
+        </li>
+        <li><strong>Joana Marcus:</strong>
+            <ul>
+                <li>Mes 1: 20,000</li>
+                <li>Mes 2: 22,000</li>
+                <li>Mes 3: 21,000</li>
+            </ul>
+        </li>
+        <li><strong>Alice Kellen:</strong>
+            <ul>
+                <li>Mes 1: 45,000</li>
+                <li>Mes 2: 47,000</li>
+                <li>Mes 3: 46,000</li>
+            </ul>
+        </li>
+    </ul>
+    
+    
+        </div>
+            <img src="multimedia/libros.jpeg" alt="Sailboat Image" class="img-right">
+            
+        </div>
+        <div class="card">
+            <img src="multimedia/autores.jpeg" alt="Autores Photo" class="img-left">
+            <div class="card-content">
+            
+    <a name="autoreslibros"></a>
+
+    <h2>Autores y sus Libros</h2>
+<ol class="autoreslibroscard">
+     <li><strong>Ariana Godoy</strong>
+        <ul>
+            <li><em>Heist</em></li>
+            <li><em>Through My Window</em></li>
+        </ul>
+    </li>
+
+    <li><strong>Eva Muñoz</strong>
+        <ul>
+            <li><em>Pecados Placenteros</em></li>
+            <li><em>Deseos Ocultos</em></li>
+        </ul>
+    </li>
+
+    <li><strong>Sarah Janet Maas</strong>
+        <ul>
+            <li><em>Trono de Cristal</em></li>
+            <li><em>Una Corte de Rosas y Espinas</em></li>
+        </ul>
+    </li>
+
+    <li><strong>Alex Mirez</strong>
+        <ul>
+            <li><em>Perfectos Mentirosos</em></li>
+            <li><em>Yours</em></li>
+        </ul>
+    </li>
+
+    <li><strong>Flor M Salvador</strong>
+        <ul>
+            <li><em>Boulevard</em></li>
+            <li><em>Silence</em></li>
+        </ul>
+    </li>
+
+    <li><strong>Joana Marcus</strong>
+        <ul>
+            <li><em>Irresistible Propuesta</em></li>
+            <li><em>Imposible Propuesta</em></li>
+        </ul>
+    </li>
+
+    <li><strong>Alice Kellen</strong>
+        <ul>
+            <li><em>El día que dejó de nevar en Alaska</em></li>
+            <li><em>33 Razones para Volver a Verte</em></li>
+        </ul>
+    </li>
+</ol>
+        </div>
+            <img src="multimedia/libros.jpeg" alt="Sailboat Image" class="img-right">
+            
+        </div>
+    </section>
+    <div class="social-icons">
+        <a href="https://web.facebook.com/?_rdc=1&_rdr" target="_blank"><img src="multimedia/facebook-icon.png" alt="Facebook"></a>
+        <a href="https://x.com/home" target="_blank"><img src="multimedia/twitter-icon.png" alt="Twitter"></a>
+        <a href="https://www.instagram.com/" target="_blank"><img src="multimedia/instagram-icon.png" alt="Instagram"></a>
+    </div>
+    
+    <div class="whatsapp-icon">
+        <a href="https://web.whatsapp.com/" target="_blank"><img src="multimedia/whatsapp-icon.png" alt="WhatsApp"></a>
+    </div>
+
+    <audio autoplay loop hidden>
+        <source src="multimedia/instrumental.mp3" type="audio/mpeg">
+    </audio>
+</main>
+    
+<footer>
+  
+    <div class="social-links">
+        <div class="social-link">
+            <a href="https://web.facebook.com/?_rdc=1&_rdr" target="_blank"><img src="multimedia/facebook-icon.png" alt="Facebook"></a>
+            <p>
+            ¡Para más contenido puedes <br>
+             ingresar a nuestro Facebook!
+            </p>
+            
+        </div>
+        <div class="social-link">
+            <a href="https://x.com/home" target="_blank"><img src="multimedia/twitter-icon.png" alt="Twitter"></a>
+            <p>
+            ¡Para más contenido puedes <br>
+            ingresar a nuestro Twitter!
+            </p>
+           
+        </div>
+        <div class="social-link">
+            <a href="https://www.instagram.com/" target="_blank"><img src="multimedia/instagram-icon.png" alt="Instagram"></a>
+            <p>
+            ¡Para más contenido puedes <br>
+            ingresar a nuestro Instagram!
+            </p>
+        </div>
+        <div class="social-link">
+            <a name="contacto"></a>
+        <h2>Contacto</h2>
+        <p>
+        Email: <br> contactobibliomedia@gmail.com <br>
+        Telefono: 3192837423
+        </p>
+        </div>
+        <div class="social-link">
+            <figure>
+            <img class="book"src="multimedia/book.png" alt="Book">
+            <figcaption>Libros</figcaption>
+            </figure>
+        </div>
+    </div>
+</div>
+    
+    
+</footer>
+</body>
+</html>
